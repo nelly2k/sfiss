@@ -7,12 +7,14 @@ namespace ExerciseAPIService.App
 {
     public class DependecyProvider
     {
-        public static void Config(HttpConfiguration config)
+        public static void Config(HttpConfiguration config, ExerciseConfiguration exerciseConfiguration)
         {
             var container = new UnityContainer();
             RegisterControllers(container);
             RegisterServices(container);
+            container.RegisterInstance(typeof(IExerciseConfiguration), exerciseConfiguration);
             config.DependencyResolver = new DependencyResolver(container);
+            
         }
 
         private static void RegisterControllers(IUnityContainer container)

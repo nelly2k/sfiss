@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\DependencyResolver.cs" />
+    <Compile Include="App\ExerciseConfiguration.cs" />
     <Compile Include="App\UnityConfig.cs" />
     <Compile Include="Constant\Complexity.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />

@@ -4,6 +4,6 @@ namespace ExerciseAPIService.Model
 {
     public class SearchResponse
     {
-        public ICollection<Entity> Data { get; set; }
+        public IEnumerable<Entity> Data { get; set; }
     }
 }

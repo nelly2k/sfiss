@@ -11,11 +11,11 @@ namespace ExerciseAPIService
         
         // This code configures Web API. The Startup class is specified as a type
         // parameter in the WebApp.Start method.
-        public static void ConfigureApp(IAppBuilder appBuilder)
+        public static void ConfigureApp(IAppBuilder appBuilder, ExerciseConfiguration exerciseConfig)
         {
             // Configure Web API for self-host. 
             HttpConfiguration config = new HttpConfiguration();
-            DependecyProvider.Config(config);
+            DependecyProvider.Config(config, exerciseConfig);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
