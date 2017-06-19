@@ -149,6 +149,7 @@
   <ItemGroup>
     <Compile Include="App\DependencyResolver.cs" />
     <Compile Include="App\ExerciseConfiguration.cs" />
+    <Compile Include="App\Extensions.cs" />
     <Compile Include="App\UnityConfig.cs" />
     <Compile Include="Constant\Complexity.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="ExerciseAPIService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ServiceEventSource.cs" />
+    <Compile Include="Service\DbService.cs" />
     <Compile Include="Service\ExerciseSearchService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ServiceRequestActionFilterAttribute.cs" />
