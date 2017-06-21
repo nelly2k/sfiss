@@ -5,6 +5,8 @@ using System.Text;
 using ExerciseAPIService.Model;
 using Dapper;
 using ExerciseAPIService.App;
+using System;
+using System.Dynamic;
 
 namespace ExerciseAPIService.Service
 {
@@ -28,20 +30,12 @@ namespace ExerciseAPIService.Service
 
         public SearchResponse Search(SearchExerciseRequest request)
         {
+            dynamic parameters = new ExpandoObject();
             var sb = new StringBuilder("SELECT Id, Title FROM [Exercise] WHERE")
-
-                .AppendNotNull(request.Title, "Title like ");
-
-
-
-            if (!string.IsNullOrEmpty(request.Title))
-            {
-                sb.Append(" EXISTS(SELECT * FROM [ExerciseMuscle] em WHERE em.ExerciseId = e.Id and em.MuscleId = 1)");
-            }
-            
+                .AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') ",()=>parameters.Title = request.Title);
 
             IEnumerable<Entity> result = null;
-            _dbService.Run(cn => result = cn.Query<Entity>("SELECT Id, Title FROM Exercise"));
+            _dbService.Run(cn => result = cn.Query<Entity>(sb.ToString(), (object)parameters));
             return new SearchResponse
             {
                 Data = result

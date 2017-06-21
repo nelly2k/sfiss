@@ -1,22 +1,20 @@
---DROP TABLE Exercise
---GO
---DROP TABLE ExerciseMuscle
---GO
---DROP TABLE Muscle
-
 CREATE TABLE Exercise(
 	Id INT NOT NULL IDENTITY,
 	Title NVARCHAR(150) NOT NULL,
 	OtherTitle NVARCHAR(MAX) NULL,
 	Complexity INT NULL,
 	Notes NVARCHAR(MAX) NULL,
-	CONSTRAINT pk_exercise PRIMARY KEY (Id)
+	ExerciseType INT NULL,
+	CONSTRAINT pk_exercise PRIMARY KEY (Id),
+	CONSTRAINT un_title UNIQUE (Title)
 )
 GO
 CREATE TABLE Muscle (
 	Id INT NOT NULL IDENTITY,
-	Title NVARCHAR(150) NOT NULL
-	CONSTRAINT pk_muscle PRIMARY KEY (Id)
+	Title NVARCHAR(150) NOT NULL,
+	Area INT NULL
+	CONSTRAINT pk_muscle PRIMARY KEY (Id),
+	
 )
 GO
 CREATE TABLE ExerciseMuscle(
@@ -26,7 +24,7 @@ CREATE TABLE ExerciseMuscle(
 	CONSTRAINT pk_exercisemuscle PRIMARY KEY (ExerciseId, MuscleId),
 	CONSTRAINT fk_exercisemuscle_exercise FOREIGN KEY (ExerciseId) REFERENCES Exercise (Id),
 	CONSTRAINT fk_exercisemuscle_muscle FOREIGN KEY (MuscleId) REFERENCES Muscle (Id)
-
+	
 )
 CREATE TABLE Equipment (
 	Id INT NOT NULL IDENTITY,

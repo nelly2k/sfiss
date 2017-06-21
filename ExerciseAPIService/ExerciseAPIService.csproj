@@ -59,6 +59,7 @@
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
@@ -151,7 +152,9 @@
     <Compile Include="App\ExerciseConfiguration.cs" />
     <Compile Include="App\Extensions.cs" />
     <Compile Include="App\UnityConfig.cs" />
+    <Compile Include="Constant\Area.cs" />
     <Compile Include="Constant\Complexity.cs" />
+    <Compile Include="Constant\ExerciseType.cs" />
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\MuscleController.cs" />
     <Compile Include="Controllers\RequestController.cs" />

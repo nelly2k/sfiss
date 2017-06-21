@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace ExerciseAPIService.App
 {
@@ -14,15 +15,14 @@ namespace ExerciseAPIService.App
             return sb.Append(str);
         }
 
-        public static StringBuilder AppendNotNull(this StringBuilder sb, object conditionObject, string str)
+        public static StringBuilder AppendNotNull(this StringBuilder sb, object conditionObject, string str, Action addParam)
         {
             if (conditionObject == null || conditionObject is string && string.IsNullOrEmpty(conditionObject.ToString()))
             {
                 return sb;
             }
-
+            addParam();
             return sb.Append(str);
         }
-
     }
 }
