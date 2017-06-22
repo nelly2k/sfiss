@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "Sfiss.App", "Sfiss.App\Sfiss.App.sfproj", "{685933C8-13CF-4326-B319-682200265C39}"
 EndProject
@@ -9,7 +9,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseAPIService", "Exerc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.WebUi", "Sfiss.WebUi\Sfiss.WebUi.csproj", "{C4EFA482-520A-469D-8EF7-817180E1EC85}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F70589C8-1914-4D55-842A-9C0F99E21DC6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Sfiss.Common", "Sfiss.Common\Sfiss.Common.shproj", "{A9417565-1EAE-4EC8-A8B5-1CED9868A664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.Common.Test", "Sfiss.Common.Test\Sfiss.Common.Test.csproj", "{D2DAF4B9-A029-4220-A7C3-03805B6228A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.ExerciseApiService.Test", "Sfiss.ExerciseApiService.Test\Sfiss.ExerciseApiService.Test.csproj", "{64F1B912-50AB-40EF-9C00-4A1D700F1510}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Sfiss.Common\Sfiss.Common.projitems*{a9417565-1eae-4ec8-a8b5-1ced9868a664}*SharedItemsImports = 13
+		Sfiss.Common\Sfiss.Common.projitems*{d2daf4b9-a029-4220-a7c3-03805b6228a3}*SharedItemsImports = 4
+		Sfiss.Common\Sfiss.Common.projitems*{d581ae6f-270c-47ed-a425-bb7e80a81e69}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -39,8 +52,28 @@ Global
 		{C4EFA482-520A-469D-8EF7-817180E1EC85}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4EFA482-520A-469D-8EF7-817180E1EC85}.Release|x64.ActiveCfg = Release|Any CPU
 		{C4EFA482-520A-469D-8EF7-817180E1EC85}.Release|x64.Build.0 = Release|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Debug|x64.Build.0 = Debug|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Release|x64.ActiveCfg = Release|Any CPU
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3}.Release|x64.Build.0 = Release|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Debug|x64.Build.0 = Debug|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|x64.ActiveCfg = Release|Any CPU
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2DAF4B9-A029-4220-A7C3-03805B6228A3} = {F70589C8-1914-4D55-842A-9C0F99E21DC6}
+		{64F1B912-50AB-40EF-9C00-4A1D700F1510} = {F70589C8-1914-4D55-842A-9C0F99E21DC6}
 	EndGlobalSection
 EndGlobal

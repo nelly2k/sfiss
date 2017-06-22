@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a9417565-1eae-4ec8-a8b5-1ced9868a664</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Sfiss.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\SearchRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Pagination.cs" />
+  </ItemGroup>
+</Project>

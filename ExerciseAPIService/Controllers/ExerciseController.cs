@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Web.Http;
-using ExerciseAPIService.App;
 using ExerciseAPIService.Model;
 using ExerciseAPIService.Service;
+using Sfiss.Common.Model;
 
 namespace ExerciseAPIService.Controllers
 {
     [ServiceRequestActionFilter]
     public class ExerciseController:ApiController
     {
-        private readonly IExerciseSearchService _exerciseSearchService;
-        private readonly IExerciseConfiguration _configuration;
+        private readonly IExerciseService _exerciseService;
 
-        public ExerciseController(IExerciseSearchService exerciseSearchService, IExerciseConfiguration configuration)
+        public ExerciseController(IExerciseService exerciseService)
         {
-            _exerciseSearchService = exerciseSearchService;
-            _configuration = configuration;
+            _exerciseService = exerciseService;
         }
 
         public Exercise Get(int id)
         {
-            throw new NotImplementedException();
+            return _exerciseService.Get(id);
         }
 
-        public SearchResponse Post([FromBody] SearchExerciseRequest request)
+        public PaginationResult<ExerciseBrief> Post([FromBody] SearchExerciseRequest request)
         {
-            var cs = _configuration.ConnectionString;
-            return _exerciseSearchService.Search(request);
+            return _exerciseService.Search(request);
         }
     }
 }

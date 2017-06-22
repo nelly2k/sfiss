@@ -1,20 +1,21 @@
 ﻿using System.Web.Http;
 using ExerciseAPIService.Model;
+using ExerciseAPIService.Service;
 
 namespace ExerciseAPIService.Controllers
 {
     [ServiceRequestActionFilter]
     public class RequestController:ApiController
     {
+        private readonly IRequestService _requestService;
 
-        // POST api/request 
-        public void Post([FromBody]AddRequest value)
+        public RequestController(IRequestService requestService)
         {
+            _requestService = requestService;
         }
-
-        // PUT api/request/5 
-        public void Put(int id, [FromBody]string value)
+        public void Post([FromBody]AddRequest request)
         {
+            _requestService.Create(request);
         }
     }
 }
