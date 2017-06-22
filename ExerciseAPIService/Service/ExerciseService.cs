@@ -43,7 +43,7 @@ namespace ExerciseAPIService.Service
         {
             return _repositoryService.Search<ExerciseBrief>(request, "Exercise", "Title", (sb, parameters) =>
             {
-                sb.AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitle LIKE CONCAT('%',@Title,'%') ", parameters, nameof(request.Title), request.Title)
+                sb.AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitles LIKE CONCAT('%',@Title,'%') ", parameters, nameof(request.Title), request.Title)
                     .AppendInAny(ins => $"e.ExerciseType in ({ins})", "exerciseType", request.Types.Select(x => (int)x).ToList(), parameters)
                     .AppendInAny(ins => $"e.Complexity in ({ins})", "complexity", request.Complexity.Select(x => (int)x).ToList(), parameters)
                     .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em where em.ExerciseId = e.Id AND em.MuscleId IN ({ins})", "muscle", request.Muscles.Select(x => x.Id), parameters)

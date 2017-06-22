@@ -167,7 +167,6 @@
     <Compile Include="Model\Muscle.cs" />
     <Compile Include="Model\SearchEquipmentRequest.cs" />
     <Compile Include="Model\SearchExerciseRequest.cs" />
-    <Compile Include="Model\SearchExerciseResponse.cs" />
     <Compile Include="Model\SearchMuscleRequest.cs" />
     <Compile Include="Model\SearchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

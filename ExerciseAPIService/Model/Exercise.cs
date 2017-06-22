@@ -10,7 +10,7 @@ namespace ExerciseAPIService.Model
 
     public class ExerciseBrief : Entity
     {
-        public string[] OtherTitles { get; set; }
+        public string OtherTitles { get; set; }
         public Complexity? Complexity { get; set; }
         public IEnumerable<Muscle> Muscles { get; set; }
         public IEnumerable<Equipment> Equipments { get; set; }

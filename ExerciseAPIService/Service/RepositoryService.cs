@@ -32,14 +32,17 @@ namespace ExerciseAPIService.Service
             dynamic parameters = new ExpandoObject();
             var sb = new StringBuilder();
             buildSearchParams.Invoke(sb, parameters);
+            sb.Pagination(request);
             sb.Where();
-            sb.Insert(0, $"select * from [{tableName}]");
+            var newSb = new StringBuilder(sb.ToString());
+            sb.Insert(0, $"select * from [{tableName}] e");
+            
             var result = new PaginationResult<T>();
             _dbService.Run(cn => result.Data = cn.Query<T>(sb.ToString(), (object)parameters));
-            sb.Remove(0, 1);
-            sb.Pagination(request);
-            sb.Insert(0, $"select count(*) from [{tableName}]");
-            _dbService.Run(cn => result.Total = cn.Query<int>(sb.ToString(), (object)parameters).SingleOrDefault());
+          
+            
+            newSb.Insert(0, $"select count(*) from [{tableName}] e");
+            _dbService.Run(cn => result.Total = cn.Query<int>(newSb.ToString(), (object)parameters).SingleOrDefault());
             return result;
         }
 

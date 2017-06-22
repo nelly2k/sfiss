@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "Sfiss.App", "Sfiss.App\Sfiss.App.sfproj", "{685933C8-13CF-4326-B319-682200265C39}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.Common.Test", "Sfiss.Common.Test\Sfiss.Common.Test.csproj", "{D2DAF4B9-A029-4220-A7C3-03805B6228A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.ExerciseApiService.Test", "Sfiss.ExerciseApiService.Test\Sfiss.ExerciseApiService.Test.csproj", "{64F1B912-50AB-40EF-9C00-4A1D700F1510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.WorkoutAPIService", "Sfiss.WorkoutAPIService\Sfiss.WorkoutAPIService.csproj", "{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -68,6 +70,12 @@ Global
 		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|x64.ActiveCfg = Release|Any CPU
 		{64F1B912-50AB-40EF-9C00-4A1D700F1510}.Release|x64.Build.0 = Release|Any CPU
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Debug|x64.ActiveCfg = Debug|x64
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Debug|x64.Build.0 = Debug|x64
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Release|Any CPU.ActiveCfg = Release|x64
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Release|x64.ActiveCfg = Release|x64
+		{4E81A5A3-88A3-422F-8B6F-6F8B38BAA214}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

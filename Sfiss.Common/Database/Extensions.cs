@@ -76,7 +76,7 @@ namespace Sfiss.Common.Database
         {
             if (sb.Length > 0)
             {
-                sb.Append(" WHERE ");
+                sb.Insert(0," WHERE ");
             }
             return sb;
         }

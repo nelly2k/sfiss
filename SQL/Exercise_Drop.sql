@@ -1,5 +1,3 @@
-DROP TABLE ExerciseAnalytics
-GO
 DROP TABLE ExerciseEquipment
 GO 
 DROP TABLE ExerciseMuscle

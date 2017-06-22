@@ -30,7 +30,7 @@ namespace ExerciseAPIService.Service
                         " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitle LIKE CONCAT('%',@Title,'%') ", parameters,
                         nameof(request.Title), request.Title)
                     .AppendNotNull(request.ExerciseId,
-                        " EXISTS(select * from [ExerciseMuscle] em where em.MuscleId = e.Id AND em.ExerciseId = @ExerciseId",
+                        " EXISTS(select * from [ExerciseMuscle] em where em.MuscleId = e.Id AND em.ExerciseId = @ExerciseId)",
                         parameters, nameof(request.ExerciseId), request.ExerciseId)
                     .AppendNotNull(request.Areas, " e.Area in {@Areas}", parameters, nameof(request.Areas),
                         request.Areas);
