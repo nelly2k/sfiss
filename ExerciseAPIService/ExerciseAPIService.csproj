@@ -160,15 +160,12 @@
     <Compile Include="Controllers\RequestController.cs" />
     <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Model\AddRequest.cs" />
-    <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Equipment.cs" />
     <Compile Include="Model\Exercise.cs" />
-    <Compile Include="Model\IEntity.cs" />
     <Compile Include="Model\Muscle.cs" />
     <Compile Include="Model\SearchEquipmentRequest.cs" />
     <Compile Include="Model\SearchExerciseRequest.cs" />
     <Compile Include="Model\SearchMuscleRequest.cs" />
-    <Compile Include="Model\SearchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OwinCommunicationListener.cs" />
     <Compile Include="ExerciseAPIService.cs" />
