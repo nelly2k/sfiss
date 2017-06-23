@@ -1,4 +1,4 @@
-﻿namespace ExerciseAPIService.Model
+﻿namespace Sfiss.Common.Model
 {
     public class Entity:IEntity
     {
