@@ -50,12 +50,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExerciseAPIService\ExerciseAPIService.csproj">
-      <Project>{d581ae6f-270c-47ed-a425-bb7e80a81e69}</Project>
-      <Name>ExerciseAPIService</Name>
+    <ProjectReference Include="..\Sfiss.ExerciseAPIService\Sfiss.ExerciseAPIService.csproj">
+      <Project>{95A3AD57-6EAD-49BC-90B1-00DD9F3FA02C}</Project>
+      <Name>Sfiss.ExerciseAPIService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

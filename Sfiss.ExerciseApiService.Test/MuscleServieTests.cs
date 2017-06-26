@@ -1,7 +1,8 @@
-﻿using ExerciseAPIService.Model;
-using ExerciseAPIService.Service;
+﻿
 using NSubstitute;
 using NUnit.Framework;
+using Sfiss.Common.Database;
+using Sfiss.ExerciseAPIService.Muscle;
 
 namespace Sfiss.ExerciseApiService.Test
 {

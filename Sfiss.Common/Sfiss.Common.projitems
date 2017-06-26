@@ -9,7 +9,11 @@
     <Import_RootNamespace>Sfiss.Common</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\IConnectionStringConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\IService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DbService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\RepositoryService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\SearchRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Entity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\IEntity.cs" />
