@@ -40,7 +40,6 @@ namespace Sfiss.Common.Database
             var result = new PaginationResult<T>();
             _dbService.Run(cn => result.Data = cn.Query<T>(sb.ToString(), (object)parameters));
 
-
             newSb.Insert(0, $"select count(*) from [{tableName}] e");
             _dbService.Run(cn => result.Total = cn.Query<int>(newSb.ToString(), (object)parameters).SingleOrDefault());
             return result;

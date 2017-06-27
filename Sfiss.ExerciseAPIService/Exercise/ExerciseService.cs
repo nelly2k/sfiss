@@ -45,13 +45,12 @@ namespace Sfiss.ExerciseAPIService.Exercise
             return _repositoryService.Search<ExerciseBrief>(request, "Exercise", "Title", (sb, parameters) =>
             {
                 sb.AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitles LIKE CONCAT('%',@Title,'%') ", parameters, nameof(request.Title), request.Title)
-                    .AppendInAny(ins => $"e.ExerciseType in ({ins})", "exerciseType", request.Types.Select(x => (int)x).ToList(), parameters)
-                    .AppendInAny(ins => $"e.Complexity in ({ins})", "complexity", request.Complexity.Select(x => (int)x).ToList(), parameters)
-                    .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em where em.ExerciseId = e.Id AND em.MuscleId IN ({ins})", "muscle", request.Muscles.Select(x => x.Id), parameters)
-                    .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em where em.ExerciseId = e.Id AND em.Area IN ({ins})", "area", request.Areas.Select(x => (int)x), parameters)
-                    .AppendInAny(ins => $"EXISTS(Select * from [ExerciseEquipment] ep where ep.ExerciseId = e.Id AND ep.EquipmentId IN ({ins}))", "equipment", request.Equipments.Select(x => x.Id), parameters);
+                    .AppendInAny(ins => $"e.ExerciseType in {ins}", "exerciseType", request.Types.Select(x => (int)x).ToList(), parameters)
+                    .AppendInAny(ins => $"e.Complexity in {ins}", "complexity", request.Complexity.Select(x => (int)x).ToList(), parameters)
+                    .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em where em.ExerciseId = e.Id AND em.MuscleId IN {ins})", "muscle", request.Muscles.Select(x => x.Id), parameters)
+                    .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em JOIN Muscle m ON em.MuscleId = m.Id where em.ExerciseId = e.Id AND m.Area IN {ins})", "area", request.Areas.Select(x => (int)x), parameters)
+                    .AppendInAny(ins => $"EXISTS(Select * from [ExerciseEquipment] ep where ep.ExerciseId = e.Id AND ep.EquipmentId IN {ins})", "equipment", request.Equipments.Select(x => x.Id), parameters);
             });
-
         }
     }
 }

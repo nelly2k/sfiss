@@ -3,7 +3,7 @@
     public enum Complexity
     {
         Beginner,
-        Noraml,
+        Intermediate,
         Advanced
     }
 }

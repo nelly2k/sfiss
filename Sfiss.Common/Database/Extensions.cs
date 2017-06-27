@@ -59,7 +59,7 @@ namespace Sfiss.Common.Database
             sb.And();
        
             sb.Append(getSql($"@{paramName}"));
-            (dbParameters as IDictionary<string, object>)[paramName] = inputParameters;
+            (dbParameters as IDictionary<string, object>)[paramName] = parameters.ToArray();
             return sb;
         }
 

@@ -17,6 +17,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Database\SearchRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Entity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\IEntity.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Model\Pagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PaginationResult.cs" />
   </ItemGroup>
 </Project>

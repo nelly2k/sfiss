@@ -1,11 +1,11 @@
 INSERT INTO Exercise
-SELECT 'Leg Press','',0,'', 1 UNION
-SELECT 'Bench Press','',0,'',1
+SELECT 'Leg Press','',0,'', 0,null,0 UNION
+SELECT 'Bench Press','',1,'',1,null,0
 
 INSERT INTO Muscle
 SELECT 'Quadriceps',1 UNION
 SELECT 'Hamstring',1 UNION
-SELECT 'Pectoralis',1
+SELECT 'Pectoralis',2
 
 INSERT INTO ExerciseMuscle
 SELECT 1,1,1 UNION

@@ -10,10 +10,11 @@
   "dependencies": {
     "@angular/common": "2.4.*",
     "@angular/core": "2.4.*",
-    "@angular/http": "2.4.*", 
+    "@angular/http": "2.4.*",
     "@angular/compiler": "2.4.*",
     "@angular/router": "3.4.*",
-    "angular2-materialize": "6.6.*",
+    "@angular/material": "2.0.*",
+    "@angular/animations": "4.3.*",
     "materialize-css": "*",
     "jquery": "3.1.1",
     "systemjs": "0.19.43",
@@ -25,6 +26,4 @@
     "core-js": "2.4.1",
     "reflect-metadata": "0.1.8"
   }
-  
-
 }
