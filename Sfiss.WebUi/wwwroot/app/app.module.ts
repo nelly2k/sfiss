@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
-
+import { MdSidenavModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_CONFIG, AppConfig } from './app.config';
 
 import { AppComponent } from "./app.component";
@@ -17,7 +17,7 @@ import { ExerciseService } from "./exercise/exercise.service";
 import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
-    imports: [BrowserModule, HttpModule, FormsModule, RouterModule, AppRoutingModule, MaterialModule],
+    imports: [BrowserModule, HttpModule, FormsModule, RouterModule, AppRoutingModule, BrowserAnimationsModule, MdSidenavModule],
     declarations: [AppComponent, ExerciseSearchComponent, ExerciseViewComponent, DashboardComponent],
     bootstrap: [AppComponent],
     providers: [{ provide: APP_CONFIG, useValue: AppConfig }, ExerciseService]

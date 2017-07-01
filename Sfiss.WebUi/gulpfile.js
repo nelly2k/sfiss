@@ -7,10 +7,6 @@ gulp.task("restore:materialize",
     function () {
         gulp.src(["node_modules/materialize-css/dist/**/*"])
             .pipe(gulp.dest(libs + "materialize"));
-
-        gulp.src(["node_modules/angular2-materialize/dist/**"])
-            .pipe(gulp.dest(libs + "materialize"));
-
     });
 
 gulp.task("restore:systemjs", function () {
@@ -31,12 +27,6 @@ gulp.task("restore:jquery",
         gulp.src(["node_modules/jquery/dist/*"])
             .pipe(gulp.dest(libs + "jquery"));
     });
-
-gulp.task("restore:angular-in-memory-web-api", function () {
-    gulp.src([
-        "node_modules/angular-in-memory-web-api/**/*.js"
-    ]).pipe(gulp.dest(libs + "angular-in-memory-web-api"));
-});
 
 gulp.task('restore:rxjs', function () {
     gulp.src([
@@ -81,6 +71,5 @@ gulp.task("restore", [
     "restore:systemjs",
     "restore:zone.js",
     "restore:core-js",
-    "restore:reflect-metadata",
-    "restore:angular-in-memory-web-api"
+    "restore:reflect-metadata"
 ])
