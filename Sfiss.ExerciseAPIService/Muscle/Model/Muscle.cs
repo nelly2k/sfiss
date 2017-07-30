@@ -6,4 +6,9 @@ namespace Sfiss.ExerciseAPIService.Muscle
     {
         public Area Area { get; set; }
     }
+
+    public class MuscleDto : Entity
+    {
+        public string Area { get; set; }
+    }
 }

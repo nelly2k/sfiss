@@ -2,6 +2,7 @@
 using System.Dynamic;
 using System.Linq;
 using System.Text;
+using AutoMapper;
 using Dapper;
 using Sfiss.Common.Contract;
 using Sfiss.Common.Model;
@@ -13,6 +14,9 @@ namespace Sfiss.Common.Database
         PaginationResult<T> Search<T>(SearchRequest request, string tableName, string orderByDefault,
             Action<StringBuilder, ExpandoObject> buildSearchParams);
 
+        PaginationResult<TResult> Search<TDto, TResult>(SearchRequest request, string tableName,
+            string orderByDefault,
+            Action<StringBuilder, ExpandoObject> buildSearchParams);
         T Get<T>(int id);
     }
 
@@ -24,6 +28,19 @@ namespace Sfiss.Common.Database
         {
             _dbService = dbService;
         }
+
+        public PaginationResult<TResult> Search<TDto, TResult>(SearchRequest request, string tableName,
+            string orderByDefault,
+            Action<StringBuilder, ExpandoObject> buildSearchParams)
+        {
+            var searchResult = Search<TDto>(request, tableName, orderByDefault, buildSearchParams);
+
+            var result = new PaginationResult<TResult>();
+            result.Total = searchResult.Total;
+            result.Data = searchResult.Data.Select(x=>Mapper.Map<TResult>(x));
+            return result;
+        }
+
         public PaginationResult<T> Search<T>(SearchRequest request, string tableName, string orderByDefault,
             Action<StringBuilder, ExpandoObject> buildSearchParams)
         {

@@ -13,12 +13,14 @@ namespace Sfiss.ExerciseAPIService
             // Configure Web API for self-host. 
             HttpConfiguration config = new HttpConfiguration();
             DependecyProvider.Config(config, exerciseConfig);
+            MappingConfig.Config();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
+            config.EnableCors();
             appBuilder.UseWebApi(config);
         }
     }

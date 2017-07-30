@@ -1,0 +1,29 @@
+
+$muscle-color-hover:  color("blue-grey", "darken-3") !default;
+$muscle-color: color("blue-grey","base")!default;
+$muscle-target-color: color("deep-orange","base")!default;
+$muscle-synergist-color: color("blue-grey","darken-2")!default;
+$muscle-color-active:  color("orange", "darken-2") !default;
+
+.muscle{
+    cursor:pointer;
+
+    fill:$muscle-color;
+
+    &.active{
+        fill:$muscle-color-active
+    }
+
+    &.synergist{
+        fill:$muscle-synergist-color
+    }
+
+    &.target{
+        fill:$muscle-target-color;
+    }
+
+    &:hover{
+        fill:$muscle-color-hover
+    }
+
+}

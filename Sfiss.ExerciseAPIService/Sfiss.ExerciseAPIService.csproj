@@ -36,6 +36,9 @@
     <AdditionalFileItemNames>$(AdditionalFileItemNames);None</AdditionalFileItemNames>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
     </Reference>
@@ -105,8 +108,14 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
@@ -117,6 +126,7 @@
   <ItemGroup>
     <Compile Include="App\DependencyResolver.cs" />
     <Compile Include="App\ExerciseConfiguration.cs" />
+    <Compile Include="App\MappingConfig.cs" />
     <Compile Include="App\UnityConfig.cs" />
     <Compile Include="Equipment\EquipmentController.cs" />
     <Compile Include="Equipment\EquipmentService.cs" />
@@ -126,10 +136,12 @@
     <Compile Include="Exercise\ExerciseService.cs" />
     <Compile Include="Exercise\Model\Complexity.cs" />
     <Compile Include="Exercise\Model\Exercise.cs" />
+    <Compile Include="Exercise\Model\ExerciseProfile.cs" />
     <Compile Include="Exercise\Model\ExerciseType.cs" />
     <Compile Include="Exercise\Model\SearchExerciseRequest.cs" />
     <Compile Include="Muscle\Model\Area.cs" />
     <Compile Include="Muscle\Model\Muscle.cs" />
+    <Compile Include="Muscle\Model\MuscleProfile.cs" />
     <Compile Include="Muscle\Model\SearchMuscleRequest.cs" />
     <Compile Include="Muscle\MuscleController.cs" />
     <Compile Include="Muscle\MuscleServise.cs" />

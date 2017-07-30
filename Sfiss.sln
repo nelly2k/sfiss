@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "Sfiss.App", "Sfiss.App\Sfiss.App.sfproj", "{685933C8-13CF-4326-B319-682200265C39}"
 EndProject
@@ -17,11 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.WorkoutAPIService", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.ExerciseAPIService", "Sfiss.ExerciseAPIService\Sfiss.ExerciseAPIService.csproj", "{95A3AD57-6EAD-49BC-90B1-00DD9F3FA02C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.WebUi", "Sfiss.WebUi\Sfiss.WebUi.csproj", "{1BE2E73D-3409-4081-9DA4-57862FA4FF63}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTest", "IntegrationTest", "{26E57C32-846C-4778-8972-82730622D328}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.ExerciseApiService.IntegrationTest", "Sfiss.ExerciseApiService.IntegrationTest\Sfiss.ExerciseApiService.IntegrationTest.csproj", "{8634B577-9B65-4A97-8AD4-09B917A04E55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.MediaAPIService", "Sfiss.MediaAPIService\Sfiss.MediaAPIService.csproj", "{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -72,14 +72,6 @@ Global
 		{95A3AD57-6EAD-49BC-90B1-00DD9F3FA02C}.Release|Any CPU.ActiveCfg = Release|x64
 		{95A3AD57-6EAD-49BC-90B1-00DD9F3FA02C}.Release|x64.ActiveCfg = Release|x64
 		{95A3AD57-6EAD-49BC-90B1-00DD9F3FA02C}.Release|x64.Build.0 = Release|x64
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Debug|x64.Build.0 = Debug|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Release|x64.ActiveCfg = Release|Any CPU
-		{1BE2E73D-3409-4081-9DA4-57862FA4FF63}.Release|x64.Build.0 = Release|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -88,6 +80,14 @@ Global
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|x64.ActiveCfg = Release|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|x64.Build.0 = Release|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Debug|x64.Build.0 = Debug|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Release|x64.ActiveCfg = Release|Any CPU
+		{748AD22E-1016-4D0F-A452-A30A8DCA9C5B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

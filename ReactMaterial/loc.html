@@ -1,0 +1,342 @@
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+</head>
+<body>
+    <style>
+        .dropdown-button.btn-flat {
+            min-height: 50px;
+        }
+
+            .dropdown-button.btn-flat > i:first-child {
+                float: left;
+                padding: 5px 10px;
+            }
+
+        input {
+            height: 2rem;
+        }
+
+        .row {
+            margin-bottom: 3px;
+        }
+
+        .input-field {
+            margin-top: 0.8rem;
+        }
+    </style>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header blue-grey active  white-text">
+                <i class="material-icons prefix">list</i> Warm Up
+                <div class="right">
+                    <i class="material-icons prefix">access_time</i>10 min
+                </div>
+            </div>
+
+            <div class="collapsible-body no-padding">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="section_header" />
+                        <label for="section_header">Section Title</label>
+                    </div>
+                </div>
+                <div class="row  blue-grey lighten-5">
+                    <div class="col s12 valign-wrapper input-field">
+
+                        Play exercises in
+                        <div class="inline">
+                            <a class='dropdown-button btn-flat' href='#' data-activates='dropdown1'>
+                                <i class="material-icons">autorenew</i> circuits<i class="material-icons">arrow_drop_down</i>
+                            </a>
+                            <ul id='dropdown1' class='dropdown-content' style="width: auto">
+                                <li><a href="#!"><i class="material-icons">autorenew</i>circuits</a></li>
+                                <li><a href="#!"><i class="material-icons">list</i>order</a></li>
+                            </ul>
+                        </div>
+                        measuring
+                        <div class="inline">
+                            <a class='dropdown-button btn-flat' href='#' data-activates='dropdown2'><i class="material-icons">access_time</i> TIME<i class="material-icons">arrow_drop_down</i></a>
+                            <ul id='dropdown2' class='dropdown-content' style="width: auto">
+                                <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                                <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                                <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                            </ul>
+                        </div>
+                        in &nbsp;&nbsp;&nbsp;
+                        <div class="input-field inline">
+                            <input style="width: 7em" type="number" id="minutes" />
+                            <label for="minutes">Minutes</label>
+                        </div>&nbsp;
+                        <div class="input-field inline">
+                            <input style="width: 7em" type="number" id="seconds" />
+                            <label for="seconds">Seconds</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <img src="media/pushup.jpeg" class="responsive-img" />
+                    </div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Push Ups</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12  valign-wrapper ">
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" value="3" id="sets" />
+                                    <label for="sets">Sets</label>
+                                </div>
+
+                                <div class="inline">
+                                    <a class='dropdown-button btn-flat' href='#' data-activates='dropdown3'>
+                                        <i class="material-icons">linear_scale</i>distance<i class="material-icons">arrow_drop_down</i>
+                                    </a>
+                                    <ul id='dropdown3' class='dropdown-content' style="width: auto">
+                                        <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                                        <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                                        <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" id="kilometers" />
+                                    <label for="kilometers">kilometers</label>
+                                </div>&nbsp;
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" id="meters" />
+                                    <label for="meters">meters</label>
+                                </div>
+                                <div class="input-field inline">
+                                    <i class="material-icons prefix">local_drink</i>
+                                    <input style="width: 7em" type="number" id="zzzseconds" />
+                                    <label for="zzzseconds">Rest</label>
+                                </div>
+                                seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="col s1">
+                        <img src="media/pushup.jpeg" class="responsive-img" />
+                    </div>
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="inline">
+                                    <h5 class="inline">Push Ups</h5>
+                                </div>
+                               
+                                <div class="inline">
+                                    <a class="waves-effect waves-teal btn-flat"><i class="material-icons"> delete</i></a>
+                                    <i class="material-icons">drag_handle</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12  valign-wrapper ">
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" value="3" id="sets" />
+                                    <label for="sets">Sets</label>
+                                </div>
+
+                                <div class="inline">
+                                    <a class='dropdown-button btn-flat' href='#' data-activates='dropdown3'>
+                                        <i class="material-icons">linear_scale</i>distance<i class="material-icons">arrow_drop_down</i>
+                                    </a>
+                                    <ul id='dropdown3' class='dropdown-content' style="width: auto">
+                                        <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                                        <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                                        <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" id="kilometers" />
+                                    <label for="kilometers">kilometers</label>
+                                </div>&nbsp;
+                                <div class="input-field inline">
+                                    <input style="width: 7em" type="number" id="meters" />
+                                    <label for="meters">meters</label>
+                                </div>
+                                <div class="input-field inline">
+                                    <i class="material-icons prefix">local_drink</i>
+                                    <input style="width: 7em" type="number" id="zzzseconds" />
+                                    <label for="zzzseconds">Rest</label>
+                                </div>
+                                seconds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+        
+    <li>
+        <div class="collapsible-header blue-grey active  white-text">
+            <i class="material-icons prefix">list</i> Warm Up
+            <div class="right">
+                <i class="material-icons prefix">access_time</i>10 min
+            </div>
+        </div>
+
+        <div class="collapsible-body no-padding">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" id="section_header" />
+                    <label for="section_header">Section Title</label>
+                </div>
+            </div>
+            <div class="row  blue-grey lighten-5">
+                <div class="col s12 valign-wrapper input-field">
+
+                    Play exercises in
+                    <div class="inline">
+                        <a class='dropdown-button btn-flat' href='#' data-activates='dropdown1'>
+                            <i class="material-icons">autorenew</i> circuits<i class="material-icons">arrow_drop_down</i>
+                        </a>
+                        <ul id='dropdown1' class='dropdown-content' style="width: auto">
+                            <li><a href="#!"><i class="material-icons">autorenew</i>circuits</a></li>
+                            <li><a href="#!"><i class="material-icons">list</i>order</a></li>
+                        </ul>
+                    </div>
+                    measuring
+                    <div class="inline">
+                        <a class='dropdown-button btn-flat' href='#' data-activates='dropdown2'><i class="material-icons">access_time</i> TIME<i class="material-icons">arrow_drop_down</i></a>
+                        <ul id='dropdown2' class='dropdown-content' style="width: auto">
+                            <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                            <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                            <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                        </ul>
+                    </div>
+                    in &nbsp;&nbsp;&nbsp;
+                    <div class="input-field inline">
+                        <input style="width: 7em" type="number" id="minutes" />
+                        <label for="minutes">Minutes</label>
+                    </div>&nbsp;
+                    <div class="input-field inline">
+                        <input style="width: 7em" type="number" id="seconds" />
+                        <label for="seconds">Seconds</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s1">
+                    <img src="media/pushup.jpeg" class="responsive-img" />
+                </div>
+                <div class="col s10">
+                    <div class="row">
+                        <div class="col s12">
+                            <h5>Push Ups</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12  valign-wrapper ">
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" value="3" id="sets" />
+                                <label for="sets">Sets</label>
+                            </div>
+
+                            <div class="inline">
+                                <a class='dropdown-button btn-flat' href='#' data-activates='dropdown3'>
+                                    <i class="material-icons">linear_scale</i>distance<i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul id='dropdown3' class='dropdown-content' style="width: auto">
+                                    <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                                    <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                                    <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" id="kilometers" />
+                                <label for="kilometers">kilometers</label>
+                            </div>&nbsp;
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" id="meters" />
+                                <label for="meters">meters</label>
+                            </div>
+                            <div class="input-field inline">
+                                <i class="material-icons prefix">local_drink</i>
+                                <input style="width: 7em" type="number" id="zzzseconds" />
+                                <label for="zzzseconds">Rest</label>
+                            </div>
+                            seconds
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s1">
+                    <img src="media/pushup.jpeg" class="responsive-img" />
+                </div>
+                <div class="col s10">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="inline">
+                                <h5 class="inline">Push Ups</h5>
+                            </div>
+                               
+                            <div class="inline">
+                                <a class="waves-effect waves-teal btn-flat"><i class="material-icons"> delete</i></a>
+                                <i class="material-icons">drag_handle</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12  valign-wrapper ">
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" value="3" id="sets" />
+                                <label for="sets">Sets</label>
+                            </div>
+
+                            <div class="inline">
+                                <a class='dropdown-button btn-flat' href='#' data-activates='dropdown3'>
+                                    <i class="material-icons">linear_scale</i>distance<i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul id='dropdown3' class='dropdown-content' style="width: auto">
+                                    <li><a href="#!"><i class="material-icons">linear_scale</i>distance</a></li>
+                                    <li><a href="#!"><i class="material-icons">access_time</i>time</a></li>
+                                    <li><a href="#!"><i class="material-icons">#</i>rounds</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" id="kilometers" />
+                                <label for="kilometers">kilometers</label>
+                            </div>&nbsp;
+                            <div class="input-field inline">
+                                <input style="width: 7em" type="number" id="meters" />
+                                <label for="meters">meters</label>
+                            </div>
+                            <div class="input-field inline">
+                                <i class="material-icons prefix">local_drink</i>
+                                <input style="width: 7em" type="number" id="zzzseconds" />
+                                <label for="zzzseconds">Rest</label>
+                            </div>
+                            seconds
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</body>
+</html>

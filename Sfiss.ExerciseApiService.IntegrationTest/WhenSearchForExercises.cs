@@ -76,7 +76,7 @@ namespace Sfiss.ExerciseApiService.IntegrationTest
             Assert.That(Run(x=>x.Equipments = Builder<Equipment>.CreateListOfSize(1).All().With(e=>e.Id = 1).Build()).Data.Single().Title, Is.EqualTo("Bench Press"));
         }
 
-        private PaginationResult<ExerciseBrief> Run(Action<SearchExerciseRequest> requestAction = null)
+        private PaginationResult<Exercise> Run(Action<SearchExerciseRequest> requestAction = null)
         {
             var request = new SearchExerciseRequest();
             requestAction?.Invoke(request);
