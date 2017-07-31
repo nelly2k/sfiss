@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 
-namespace Sfiss.WorkoutAPIService.Controllers
+namespace Sfiss.WorkoutAPIService.Workout
 {
     public class WorkoutController:ApiController
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Sfiss.WorkoutAPIService.Constant;
+using Sfiss.WorkoutAPIService.Section.Model;
 
 namespace Sfiss.WorkoutAPIService.Model
 {

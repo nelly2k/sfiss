@@ -19,5 +19,6 @@ namespace Sfiss.ExerciseAPIService.Exercise
         public ICollection<ExerciseType> Types { get; set; }
         public ICollection<Complexity> Complexity { get; set; }
         public ICollection<Area> Areas { get; set; }
+        public ICollection<int> Ids { get; set; }
     }
 }

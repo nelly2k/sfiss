@@ -12,26 +12,25 @@
   "author": "Nelli Lovchikova",
   "license": "MIT",
   "devDependencies": {
-    "gulp":"3.9.1",
-    "gulp-connect":"5.0.0",
-    "gulp-open":"2.0.0",
-    "webpack-stream":"3.2.0",
-    "gulp-bundle-file":"1.1.2",
-    "ts-loader":"2.3.1",
-    "gulp-sass":"3.1.0"
+    "gulp": "3.9.1",
+    "gulp-connect": "5.0.0",
+    "gulp-open": "2.0.0",
+    "webpack-stream": "3.2.0",
+    "gulp-bundle-file": "1.1.2",
+    "ts-loader": "2.3.1",
+    "gulp-sass": "3.1.0"
   },
   "dependencies": {
-    "@types/react":"15.0.38",
-    "@types/react-dom":"15.5.1",
-    "@types/flux":"3.1.2",
-    "@types/react-router-dom":"4.0.7",
-    "@types/axios":"0.*",
-    "materialize-css":"0.100.1",
-    "react":"15.6.1",
-    "react-dom":"15.6.1",
-    "flux":"3.1.2",
-    "react-router-dom":"4.1.2",
-    "@types/materialize-css":"0.98.3"
-    
+    "@types/react": "15.0.38",
+    "@types/react-dom": "15.5.1",
+    "@types/flux": "3.1.2",
+    "@types/react-router-dom": "4.0.7",
+    "@types/axios": "0.*",
+    "materialize-css": "0.100.1",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "flux": "3.1.2",
+    "react-router-dom": "4.1.2",
+    "@types/materialize-css": "0.98.3"
   }
 }
