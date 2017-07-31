@@ -32,7 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sfiss.ExerciseAPIService\Sfiss.ExerciseAPIService.csproj" />
-    <ProjectReference Include="..\Sfiss.MediaAPIService\Sfiss.MediaAPIService.csproj" />
     <ProjectReference Include="..\Sfiss.WorkoutAPIService\Sfiss.WorkoutAPIService.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

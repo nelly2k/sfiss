@@ -22,13 +22,17 @@ namespace Sfiss.ExerciseAPIService.Exercise
         private readonly IRepositoryService _repositoryService;
         private readonly IMuscleServise _muscleServise;
         private readonly IEquipmentService _equipmentService;
+        private readonly IImageService _imageService;
 
-        public ExerciseService(IExerciseConfiguration exerciseConfiguration, IRepositoryService repositoryService, IMuscleServise muscleServise, IEquipmentService equipmentService)
+        public ExerciseService(IExerciseConfiguration exerciseConfiguration, 
+            IRepositoryService repositoryService, IMuscleServise muscleServise, IEquipmentService equipmentService,
+            IImageService imageService)
         {
             _exerciseConfiguration = exerciseConfiguration;
             _repositoryService = repositoryService;
             _muscleServise = muscleServise;
             _equipmentService = equipmentService;
+            _imageService = imageService;
         }
         internal IDbConnection Connection => new SqlConnection(_exerciseConfiguration.ConnectionString);
 
@@ -42,7 +46,7 @@ namespace Sfiss.ExerciseAPIService.Exercise
 
         public PaginationResult<Exercise> Search(SearchExerciseRequest request)
         {
-            return _repositoryService.Search<ExerciseDto, Exercise>(request, "Exercise", "Title", (sb, parameters) =>
+            var result=  _repositoryService.Search<ExerciseDto, Exercise>(request, "Exercise", "Title", (sb, parameters) =>
             {
                 sb.AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitles LIKE CONCAT('%',@Title,'%') ", parameters, nameof(request.Title), request.Title)
                     .AppendInAny(ins => $"e.Id in {ins}", "id", request.Ids.ToList(), parameters)
@@ -52,6 +56,13 @@ namespace Sfiss.ExerciseAPIService.Exercise
                     .AppendInAny(ins => $"EXISTS(select * from [ExerciseMuscle] em JOIN Muscle m ON em.MuscleId = m.Id where em.ExerciseId = e.Id AND m.Area IN {ins})", "area", request.Areas.Select(x => (int)x), parameters)
                     .AppendInAny(ins => $"EXISTS(Select * from [ExerciseEquipment] ep where ep.ExerciseId = e.Id AND ep.EquipmentId IN {ins})", "equipment", request.Equipments.Select(x => x.Id), parameters);
             });
+
+            foreach (var exercise in result.Data)
+            {
+                exercise.Img = _imageService.GetImage();
+            }
+
+            return result;
         }
     }
 }

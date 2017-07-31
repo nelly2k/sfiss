@@ -22,5 +22,7 @@ namespace Sfiss.ExerciseAPIService.Exercise
         public string ExerciseType { get; set; }
 
         public string Notes { get; set; }
+
+        public byte[] Img { get; set; }
     }
 }

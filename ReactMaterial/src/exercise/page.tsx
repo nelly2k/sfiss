@@ -25,6 +25,7 @@ class ExerciseSearchPage extends React.Component{
          "pageSize":1,
          "pageNumber":1
      }) .then(response=>{
+         
          this.setState({
            data:response.data.Data
        })

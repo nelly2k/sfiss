@@ -37,7 +37,7 @@ namespace Sfiss.Common.Database
 
             var result = new PaginationResult<TResult>();
             result.Total = searchResult.Total;
-            result.Data = searchResult.Data.Select(x=>Mapper.Map<TResult>(x));
+            result.Data = searchResult.Data.Select(x=>Mapper.Map<TResult>(x)).ToList();
             return result;
         }
 

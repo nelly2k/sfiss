@@ -13,6 +13,7 @@ namespace Sfiss.ExerciseAPIService.Exercise
             Types = new List<ExerciseType>();
             Complexity = new List<Complexity>();
             Areas = new List<Area>();
+            Ids = new List<int>();
         }
         public ICollection<Muscle.Muscle> Muscles { get; set; }
         public ICollection<Equipment.Equipment> Equipments { get; set; }

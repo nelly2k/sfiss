@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/Sfiss.App" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
-    <Parameter Name="MediaAPIService_InstanceCount" Value="1" />
     <Parameter Name="WorkoutAPIService_InstanceCount" Value="1" />
     <Parameter Name="ExerciseAPIService_InstanceCount" Value="1" />
     <Parameter Name="ExerciseDatabaseConnectionString" Value="Data Source=NELLISURFACE3\MSSQLSERVER2017;Initial Catalog=sfiss.exercise;Integrated Security=False;User Id=sfiss.servise;Password=Exol37an" />
-    <Parameter Name="MediaDatabaseConnectionString" Value="Data Source=NELLISURFACE3\MSSQLSERVER2017;Initial Catalog=sfiss.media;Integrated Security=False;User Id=sfiss.servise;Password=Exol37an" />
   </Parameters>
 </Application>
