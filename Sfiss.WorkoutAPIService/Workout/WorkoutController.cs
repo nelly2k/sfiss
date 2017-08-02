@@ -5,8 +5,15 @@ namespace Sfiss.WorkoutAPIService.Workout
 {
     public class WorkoutController:ApiController
     {
-        public string Get(Guid guid)
+        private readonly IExerciseService _exerciseService;
+
+        public WorkoutController(IExerciseService exerciseService)
         {
+            _exerciseService = exerciseService;
+        }
+        public string Get(Guid id)
+        {
+            _exerciseService.Get();
             return "value";
         }
 

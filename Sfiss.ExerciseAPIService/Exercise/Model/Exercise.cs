@@ -25,4 +25,9 @@ namespace Sfiss.ExerciseAPIService.Exercise
 
         public byte[] Img { get; set; }
     }
+
+    public class ExerciseBrief : Entity
+    {
+        
+    }
 }

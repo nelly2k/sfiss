@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Sfiss.WorkoutAPIService.App;
 
 namespace Sfiss.WorkoutAPIService
 {
@@ -26,7 +27,7 @@ namespace Sfiss.WorkoutAPIService
         {
             return new ServiceInstanceListener[]
             {
-                new ServiceInstanceListener(serviceContext => new OwinCommunicationListener(Startup.ConfigureApp, serviceContext, ServiceEventSource.Current, "ServiceEndpoint"))
+                new ServiceInstanceListener(serviceContext => new OwinCommunicationListener(a=>Startup.ConfigureApp(a, new WorkoutConfiguration()), serviceContext, ServiceEventSource.Current, "ServiceEndpoint"))
             };
         }
     }

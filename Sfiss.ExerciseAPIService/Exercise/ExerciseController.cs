@@ -20,7 +20,7 @@ namespace Sfiss.ExerciseAPIService.Exercise
             return _exerciseService.Get(id);
         }
 
-        public PaginationResult<Exercise> Post([FromBody] SearchExerciseRequest request)
+        public PaginationResult<ExerciseBrief> Post([FromBody] SearchExerciseRequest request)
         {
             return _exerciseService.Search(request);
         }

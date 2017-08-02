@@ -2,21 +2,20 @@
 using System.Reflection;
 using System.Web.Http;
 using Microsoft.Practices.Unity;
-using Sfiss.Common.Contract;
 using Sfiss.Common.Utils;
 
-namespace Sfiss.ExerciseAPIService.App
+namespace Sfiss.WorkoutAPIService.App
 {
     public class DependecyProvider
     {
-        public static void Config(HttpConfiguration config, ExerciseConfiguration exerciseConfiguration)
+        public static void Config(HttpConfiguration config, WorkoutConfiguration workoutConfiguration)
         {
             IUnityContainer container = new UnityContainer();
             RegisterControllers(container);
+            //RegisterServices(container);
             DependencyUtils.RegisterServices(container);
             DependencyUtils.RegisterServices(container, Assembly.GetExecutingAssembly());
-            container.RegisterInstance(typeof(IExerciseConfiguration), exerciseConfiguration);
-            container.RegisterInstance(typeof(IConnectionStringConfiguration), exerciseConfiguration);
+
             config.DependencyResolver = new DependencyResolver(container);
         }
 

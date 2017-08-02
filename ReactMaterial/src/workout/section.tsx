@@ -59,10 +59,6 @@ export class WorkoutSection extends React.Component <IWorkoutSectionProps,IWorko
                     <div className="valign-wrapper col s12">
                         <i className="material-icons">{this.getSectionIcon(this.state.sectionType)}</i>
                         <span>{this.props.title}</span>
-                        <div className="right valign-wrapper">
-                            <i className="material-icons prefix">access_time</i>
-                            {this.props.time}
-                        </div>
                     </div>
 
                 </div>

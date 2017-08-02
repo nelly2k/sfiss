@@ -31,7 +31,8 @@ namespace Sfiss.ExerciseAPIService
             config.ConnectionString = connectionStringParameter.Value;
             return new ServiceInstanceListener[]
             {
-                new ServiceInstanceListener(serviceContext => new OwinCommunicationListener(a=>Startup.ConfigureApp(a,config), serviceContext, ServiceEventSource.Current, "ServiceEndpoint"))
+                new ServiceInstanceListener(serviceContext => 
+                    new OwinCommunicationListener(a=>Startup.ConfigureApp(a,config), serviceContext, ServiceEventSource.Current, "ServiceEndpoint"))
             };
         }
     }

@@ -12,7 +12,7 @@ namespace Sfiss.ExerciseAPIService.Exercise
 {
     public interface IExerciseService : IService
     {
-        PaginationResult<Exercise> Search(SearchExerciseRequest request);
+        PaginationResult<ExerciseBrief> Search(SearchExerciseRequest request);
         Exercise Get(int id);
     }
 
@@ -44,9 +44,9 @@ namespace Sfiss.ExerciseAPIService.Exercise
             return result;
         }
 
-        public PaginationResult<Exercise> Search(SearchExerciseRequest request)
+        public PaginationResult<ExerciseBrief> Search(SearchExerciseRequest request)
         {
-            var result=  _repositoryService.Search<ExerciseDto, Exercise>(request, "Exercise", "Title", (sb, parameters) =>
+            var result=  _repositoryService.Search<ExerciseDto, ExerciseBrief>(request, "Exercise", "Title", (sb, parameters) =>
             {
                 sb.AppendNotNull(request.Title, " Title LIKE CONCAT('%',@Title,'%') OR  OtherTitles LIKE CONCAT('%',@Title,'%') ", parameters, nameof(request.Title), request.Title)
                     .AppendInAny(ins => $"e.Id in {ins}", "id", request.Ids.ToList(), parameters)
@@ -57,10 +57,10 @@ namespace Sfiss.ExerciseAPIService.Exercise
                     .AppendInAny(ins => $"EXISTS(Select * from [ExerciseEquipment] ep where ep.ExerciseId = e.Id AND ep.EquipmentId IN {ins})", "equipment", request.Equipments.Select(x => x.Id), parameters);
             });
 
-            foreach (var exercise in result.Data)
-            {
-                exercise.Img = _imageService.GetImage();
-            }
+            //foreach (var exercise in result.Data)
+            //{
+            //    exercise.Img = _imageService.GetImage();
+            //}
 
             return result;
         }

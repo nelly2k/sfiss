@@ -11,7 +11,7 @@ namespace Sfiss.ExerciseAPIService
         public static void ConfigureApp(IAppBuilder appBuilder, ExerciseConfiguration exerciseConfig)
         {
             // Configure Web API for self-host. 
-            HttpConfiguration config = new HttpConfiguration();
+            var config = new HttpConfiguration();
             DependecyProvider.Config(config, exerciseConfig);
             MappingConfig.Config();
 

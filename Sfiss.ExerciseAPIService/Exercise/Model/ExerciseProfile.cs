@@ -9,6 +9,8 @@ namespace Sfiss.ExerciseAPIService.Exercise.Model
             CreateMap<ExerciseDto, Exercise>()
                 .ForMember(s => s.Complexity, o => o.MapFrom(d => d.Complexity.ToString()))
                 .ForMember(s => s.ExerciseType, o => o.MapFrom(d => d.ExerciseType.ToString()));
+
+            CreateMap<ExerciseDto, ExerciseBrief>();
         }
     }
 }

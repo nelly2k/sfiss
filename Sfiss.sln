@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTest", "Integrat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.ExerciseApiService.IntegrationTest", "Sfiss.ExerciseApiService.IntegrationTest\Sfiss.ExerciseApiService.IntegrationTest.csproj", "{8634B577-9B65-4A97-8AD4-09B917A04E55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sfiss.WorkoutApiService.Test", "Sfiss.WorkoutApiService.Test\Sfiss.WorkoutApiService.Test.csproj", "{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Sfiss.Common\Sfiss.Common.projitems*{95a3ad57-6ead-49bc-90b1-00dd9f3fa02c}*SharedItemsImports = 4
@@ -78,6 +80,14 @@ Global
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|x64.ActiveCfg = Release|Any CPU
 		{8634B577-9B65-4A97-8AD4-09B917A04E55}.Release|x64.Build.0 = Release|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +96,6 @@ Global
 		{D2DAF4B9-A029-4220-A7C3-03805B6228A3} = {F70589C8-1914-4D55-842A-9C0F99E21DC6}
 		{64F1B912-50AB-40EF-9C00-4A1D700F1510} = {F70589C8-1914-4D55-842A-9C0F99E21DC6}
 		{8634B577-9B65-4A97-8AD4-09B917A04E55} = {26E57C32-846C-4778-8972-82730622D328}
+		{8C3DA711-A9D7-4B42-A246-AE17458CDBBF} = {F70589C8-1914-4D55-842A-9C0F99E21DC6}
 	EndGlobalSection
 EndGlobal
