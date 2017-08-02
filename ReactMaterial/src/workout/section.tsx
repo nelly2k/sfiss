@@ -1,10 +1,12 @@
 import * as React from "react";
 import {DropDown, IDropDownItem} from "../components/dropdown"
+import {WorkoutExercise} from "./exercise";
+import {MeasureType,MeasureTypeOptions} from "./data";
 
 interface IWorkoutSectionProps {
     title?: string;
     sectionType?: SectionType;
-    measureType?: SectionMeasureType;
+    measureType?: MeasureType;
     time?: string;
     active?: boolean;
     onTitleChanged?: (title : string) => void
@@ -25,10 +27,11 @@ export class WorkoutSection extends React.Component <IWorkoutSectionProps,IWorko
      }
     componentDidMount() {
         var sectionType = SectionType[this.props.sectionType?this.props.sectionType:SectionType.Order].toLowerCase();
-        var measureType = SectionMeasureType[this.props.measureType?this.props.measureType:SectionMeasureType.Rounds].toLowerCase();
+        var measureType = MeasureType[this.props.measureType?this.props.measureType:MeasureType.Rounds].toLowerCase();
 
         this.setState({sectionType: sectionType, measureType:measureType})
     }
+
 
     setSectionType(sectionType : string) {
         this.setState({sectionType: sectionType})
@@ -66,7 +69,7 @@ export class WorkoutSection extends React.Component <IWorkoutSectionProps,IWorko
             <div className="collapsible-body no-padding">
                 <div className="row">
                     <div className="input-field col s12">
-                        <input type="text" id="section_header" value={this.props.title}/>
+                        <input type="text" id="section_header" value={this.props.title} onChange={e=>this.props.onTitleChanged(e.target.value)}/>
                         <label htmlFor="section_header">Section Title</label>
                     </div>
                 </div>
@@ -79,15 +82,20 @@ export class WorkoutSection extends React.Component <IWorkoutSectionProps,IWorko
                                 onChange={this.setSectionType}
                                 items={SectionTypeOptions}/>
                         </div>
-                        measuring
+                    {this.state.sectionType == SectionType[SectionType.Circuit].toLowerCase() &&
+                            <span>measuring</span>
+                     }
+                     {this.state.sectionType == SectionType[SectionType.Circuit].toLowerCase() &&
+                    
                         <div className="inline">
                              <DropDown
                                 value={this.state.measureType}
                                 onChange={this.setMeasureType}
-                                items={SectionMeasureTypeOptions}/>
+                                items={MeasureTypeOptions}/>
                         </div>
-                        in &nbsp;&nbsp;&nbsp;
-                       {this.state.measureType == SectionMeasureType[SectionMeasureType.Time].toLowerCase() &&
+                     }
+                       {this.state.sectionType == SectionType[SectionType.Circuit].toLowerCase() &&
+                        this.state.measureType == MeasureType[MeasureType.Time].toLowerCase() &&
                        <div>
                             <div className="input-field inline">
                                 <input type="number" id="minutes"/>
@@ -99,11 +107,39 @@ export class WorkoutSection extends React.Component <IWorkoutSectionProps,IWorko
                             </div>
                         </div>
                        }
-                       
 
+                       {this.state.sectionType == SectionType[SectionType.Circuit].toLowerCase() &&
+                           this.state.measureType == MeasureType[MeasureType.Distance].toLowerCase() && 
+                       <div>
+                           <div className="input-field inline">
+                               <input type="number" id="kms"/>
+                                <label htmlFor="kms">kms</label>    
+                           </div>
+                            <div className="input-field inline">
+                               <input type="number" id="ms"/>
+                                <label htmlFor="ms">ms</label>    
+                           </div>
+                       </div>
+                       }
+                       
+                    {this.state.sectionType == SectionType[SectionType.Circuit].toLowerCase() &&
+                        this.state.measureType == MeasureType[MeasureType.Rounds].toLowerCase() && 
+                       <div>
+                           <div className="input-field inline">
+                               <input type="number" id="rnds"/>
+                                <label htmlFor="rnds">rounds</label>    
+                           </div>
+                            
+                       </div>
+                       }
+                      
+                        
                     </div>
                 </div>
             </div>
+            <WorkoutExercise title="Push Ups" ifInOrder={this.state.sectionType == SectionType[SectionType.Order].toLowerCase()}/>
+            <WorkoutExercise title="Pull ups" ifInOrder={this.state.sectionType == SectionType[SectionType.Order].toLowerCase()}/>
+            <WorkoutExercise title="Dips" ifInOrder={this.state.sectionType == SectionType[SectionType.Order].toLowerCase()}/>
         </li>
 
     }
@@ -126,25 +162,4 @@ const SectionTypeOptions : IDropDownItem[] = [
     }
 ]
 
-export enum SectionMeasureType {
-    Distance,
-    Time,
-    Rounds
-}
 
-const SectionMeasureTypeOptions : IDropDownItem[] = [
-    {
-        id: "distance",
-        title: "distance",
-        icon: "linear_scale"
-    }, {
-        id: "time",
-        title: "time",
-        icon: "access_time"
-    },
-    {
-        id: "rounds",
-        title: "rounds",
-        icon: "format_list_numbered"
-    }
-]

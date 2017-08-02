@@ -9,8 +9,8 @@ export interface IDropDownItem{
 
 interface IDropDownProps{
     items:IDropDownItem[];
-    value:string;
-    onChange:(id:string)=>void
+    value?:string;
+    onChange?:(id:string)=>void
 }
 
 export class DropDown extends React.Component<IDropDownProps>{

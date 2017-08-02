@@ -2,6 +2,8 @@ import * as React from "react";
 import {WorkoutSection, SectionType} from "./section";
 
 export class BuildWorkout extends React.Component {
+
+    
     render() {
         return <div>
             <div className="row">
